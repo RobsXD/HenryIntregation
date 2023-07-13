@@ -9,7 +9,7 @@ const Landing =() => {
     const [characters, setCharacters] = useState ([])
 
     function onSearch(id) {
-        axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+        axios(`https://localhost:3001/rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
            if (!characters.find(char => char.id === data.id)) 
            { if (data.name) {
               

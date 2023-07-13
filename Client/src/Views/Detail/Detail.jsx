@@ -11,7 +11,7 @@ function Detail () {
 
     const [pjDetail, setpjDetail] = useState({});
 
-    useEffect(() => {
+    const buscador = () => {
         axios(`https://rickandmortyapi.com/api/character/${id}`).then(
             ({data}) => {
                 if(data.name){
@@ -21,7 +21,12 @@ function Detail () {
             }
         }
         ).catch(err => window.alert("Error"));
-}, [])
+};
+
+
+    useEffect(buscador, []);
+
+
     return(
     <div>
 

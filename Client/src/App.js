@@ -2,7 +2,7 @@ import './App.css';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Welcome from './Views/Welcome/Welcome';
 import Landing from './Views/Landing/Landing';
-import About from './Views/About/About';
+import About from './Views/About/About.jsx';
 import Detail from "./Views/Detail/Detail";
 import Form from "./components/Formulario/Formulario"
 import { useState } from 'react';
