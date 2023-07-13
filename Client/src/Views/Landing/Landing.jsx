@@ -9,12 +9,11 @@ const Landing =() => {
     const [characters, setCharacters] = useState ([])
 
     function onSearch(id) {
-        axios(`https://localhost:3001/rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-           if (!characters.find(char => char.id === data.id)) 
-           { if (data.name) {
+        axios(`http://localhost:3001/rickandmorty/character/${id}`).then(({ data }) => {
+            if (data.name) {
               
               setCharacters((oldChars) => [...oldChars, data]);
-           }} else {
+           } else {
               window.alert('El personaje esta Repetido');
            }
         }).catch(() => window.alert("¡No hay personajes con este ID!"));

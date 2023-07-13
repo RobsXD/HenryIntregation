@@ -14,7 +14,7 @@ const App = () => {
    const navigate = useNavigate();
    const [access, setAccess] = useState (false)
    const EMAIL = "robert@mail.com"
-   const PASSWORD = "A123b329"
+   const PASSWORD = "Pastelito1"
 
    const login = (userData) => {
       if(userData.email === EMAIL && userData.password === PASSWORD) {

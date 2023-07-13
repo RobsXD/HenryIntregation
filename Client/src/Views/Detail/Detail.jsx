@@ -11,6 +11,7 @@ function Detail () {
 
     const [pjDetail, setpjDetail] = useState({});
 
+    
     const buscador = () => {
         axios(`https://rickandmortyapi.com/api/character/${id}`).then(
             ({data}) => {
@@ -24,12 +25,26 @@ function Detail () {
 };
 
 
-    useEffect(buscador, []);
-
+    useEffect(() => {
+        fetch(`http://localhost:3001/rickandmorty/character/${id}`)
+        .then ((response) => response.json())
+        .then((data) => {
+            if (data.name) {
+                setpjDetail(data)
+            }
+            else {
+                alert(data.error)
+            }
+        })
+    }, []);
 
     return(
     <div>
-
+        <h2>{pjDetail.id}</h2>
+        <h2>{pjDetail.name}</h2>
+        <h2>{pjDetail.status}</h2>
+        <h2>{pjDetail.species}</h2>
+        <img src={pjDetail.image} alt="" />
         <Link to= "/home">
         <button>Volver al home</button>
         </Link>
