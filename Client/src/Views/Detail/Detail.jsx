@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import Cards from "../../components/Cards/Cards"
-import Card from "../../components/Card/Card";
 import axios from "axios";
 
 function Detail () {
