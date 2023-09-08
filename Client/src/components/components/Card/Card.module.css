@@ -1,0 +1,49 @@
+body{
+  background-image: url("../img/rick-and-morty-space-i115643.jpg");
+}
+
+.Link{
+  text-decoration: none;
+}
+
+.body {
+  /* flex-direction: row; */
+  background-color: chartreuse;
+  border: 3px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5% ;
+  justify-content: space-between;
+  text-decoration: none;
+  text-align: center;
+}
+.body:hover{
+  background-color: black;
+  border: 3px solid chartreuse;
+  color: chartreuse;
+}
+
+.button {
+  display: flex;
+  background-color: rgb(100, 194, 7);
+  color: #fff;
+  border: 3px solid black;
+  justify-content: flex-end;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.masInfo{
+    display: flex;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+}
+
+.button:hover {
+  background-color: #999;
+}
