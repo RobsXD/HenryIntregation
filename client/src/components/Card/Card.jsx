@@ -1,5 +1,6 @@
 import Style from "./Card.module.css"
 import { Link } from "react-router-dom";
+import { OnButton } from "../Utils/Button/OnButton";
  
 const Card = ({id, name, status, species, gender, origin, image, onClose}) =>  {
 
@@ -8,7 +9,7 @@ const Card = ({id, name, status, species, gender, origin, image, onClose}) =>  {
         
       <div>
          <div className={Style.body}>
-      <button onClick={() => onClose(id)} className={Style.button}>X</button>
+      <OnButton onClick={() => onClose(id)} className={Style.button} text="X" />
          <h2>{id}</h2>
          
          <h2>{name}</h2>
@@ -23,9 +24,7 @@ const Card = ({id, name, status, species, gender, origin, image, onClose}) =>  {
          
          <img src={image} alt={name} 
          />
-          <Link className={Style.Link} to={`/detail/${id}`}>
-         <button className={Style.masInfo}>Mas Info</button>
-         </Link>
+         <OnButton onclick={() => onClose(id)} text="X" type="button"/>
          </div>
       </div>
       

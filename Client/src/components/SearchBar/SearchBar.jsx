@@ -1,7 +1,7 @@
 import style from "./SearchBar.module.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {Portal} from "../../assets/img/Index";
+import { Portal } from "../../assets/img/Index";
 
 const SearchBar = ({ onSearch }) => {
   const [id, setId] = useState("");
@@ -14,7 +14,7 @@ const SearchBar = ({ onSearch }) => {
       <nav className={style.header}>
         <img
           className={style.logo}
-          src={MyImg}
+          src={Portal}
           alt="Foto logo de rick and morty"
         />
 
